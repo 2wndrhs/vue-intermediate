@@ -23,7 +23,7 @@ export default{
 	
 	methods: {
 		removeTodo: function(todoItem, index){
-			localStorage.removeItem(todoItem);
+			localStorage.removeItem(todoItem.item);
 			this.todoItems.splice(index, 1);
 		},
 		toggleComplete: function(todoItem, index){
@@ -31,6 +31,7 @@ export default{
 			//로컬 스토리지의 데이터를 갱신
 			localStorage.removeItem(todoItem.item);
 			localStorage.setItem(todoItem.item, JSON.stringify(todoItem));
+			console.log(todoItem, index);
 		}
 	},
 	
