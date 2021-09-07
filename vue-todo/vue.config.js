@@ -1,6 +1,7 @@
 module.exports = {
 	publicPath: '',
 	devServer: {
-		disableHostCheck: true
+		disableHostCheck: true,
+		overlay: false
 	}
 }
